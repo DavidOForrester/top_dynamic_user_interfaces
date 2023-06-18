@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  font-family: sans-serif;
 }
 #menu {
   height: 100px;
@@ -10,5 +11,31 @@ body {
 }
 
 #menu.show {
+  opacity: 1;
+}
+
+#mobile-area {
+  background-color: darkgreen;
+  height: 400px;
+  width: 300px;
+}
+
+#mobile-menu-button {
+  width: 100%;
+  height: 25px;
+  background-color: lightgreen;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#mobile-menu-options {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+#mobile-menu-options.show {
   opacity: 1;
 }
