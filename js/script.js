@@ -1,6 +1,7 @@
 let clickState = "closed";
 
 const menuButton = document.getElementById("menu-button");
+const menu = document.getElementById("menu")
 
 menuButton.addEventListener("click", () => {
   if (clickState == "closed") {
@@ -11,11 +12,11 @@ menuButton.addEventListener("click", () => {
 });
 
 menuButton.addEventListener("mouseover", () => {
-  menu.hidden = false;
+    menu.classList.add('show')
 });
 
 menuButton.addEventListener("mouseout", () => {
   if (clickState == "closed") {
-    menu.hidden = true;
+    menu.classList.remove('show')
   }
 });

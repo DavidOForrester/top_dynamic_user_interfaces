@@ -1,8 +1,14 @@
 body {
-    background-color: black;
+  background-color: black;
 }
 #menu {
-    height: 100px;
-    width: 100px;
-    background-color: blue;'
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+#menu.show {
+  opacity: 1;
 }
