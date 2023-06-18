@@ -1,12 +1,21 @@
-const menuButtons = document.getElementsByClassName("menu-button");
+let clickState = "closed";
 
-for (menuButton of menuButtons) {
-  menuButton.addEventListener("click", () => {
-    const menu = document.getElementById("menu");
-    if (menu.hidden == true) {
-      menu.hidden = false;
-    } else {
-      menu.hidden = true;
-    }
-  });
-}
+const menuButton = document.getElementById("menu-button");
+
+menuButton.addEventListener("click", () => {
+  if (clickState == "closed") {
+    clickState = "open";
+  } else {
+    clickState = "closed";
+  }
+});
+
+menuButton.addEventListener("mouseover", () => {
+  menu.hidden = false;
+});
+
+menuButton.addEventListener("mouseout", () => {
+  if (clickState == "closed") {
+    menu.hidden = true;
+  }
+});
