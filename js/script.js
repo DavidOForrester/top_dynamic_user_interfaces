@@ -1,7 +1,26 @@
 const leftButton = document.getElementById("left-button");
 
 leftButton.addEventListener("click", () => {
-  console.log("testing");
+    const imagesDiv = document.getElementById("images");
+
+    const imgs = imagesDiv.querySelectorAll("img");
+  
+    let i = 0;
+    let active = 0;
+  
+    for (img of imgs) {
+      if (img.hidden == false) {
+        active = i;
+      }
+      i = i + 1;
+    }
+  
+    imgs[active].hidden = true;
+    if (active == 0) {
+      imgs[imgs.length - 1].hidden = false;
+    } else {
+      imgs[active - 1].hidden = false;
+    }
 });
 
 const rightButton = document.getElementById("right-button");
@@ -11,8 +30,22 @@ rightButton.addEventListener("click", () => {
 
   const imgs = imagesDiv.querySelectorAll("img");
 
-  imgs[0].hidden = true;
-  imgs[1].hidden = false;
+  let i = 0;
+  let active = 0;
+
+  for (img of imgs) {
+    if (img.hidden == false) {
+      active = i;
+    }
+    i = i + 1;
+  }
+
+  imgs[active].hidden = true;
+  if (active == imgs.length - 1) {
+    imgs[0].hidden = false;
+  } else {
+    imgs[active + 1].hidden = false;
+  }
 });
 
 // Dropdown
