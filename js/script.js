@@ -1,3 +1,20 @@
+const leftButton = document.getElementById("left-button");
+
+leftButton.addEventListener("click", () => {
+  console.log("testing");
+});
+
+const rightButton = document.getElementById("right-button");
+
+rightButton.addEventListener("click", () => {
+  const imagesDiv = document.getElementById("images");
+
+  const imgs = imagesDiv.querySelectorAll("img");
+
+  imgs[0].hidden = true;
+  imgs[1].hidden = false;
+});
+
 // Dropdown
 /*let clickState = "closed";
 
@@ -22,9 +39,8 @@ menuButton.addEventListener("mouseout", () => {
   }
 });*/
 
-
 // Mobile Dropdown
-let mobileClickState = "closed";
+/*let mobileClickState = "closed";
 
 const mobileMenuButton = document.getElementById("mobile-menu-button");
 const mobileMenu = document.getElementById("mobile-menu-options")
@@ -45,4 +61,4 @@ mobileMenuButton.addEventListener("mouseout", () => {
   if (mobileClickState == "closed") {
     mobileMenu.classList.remove('show')
   }
-});
+});*/
